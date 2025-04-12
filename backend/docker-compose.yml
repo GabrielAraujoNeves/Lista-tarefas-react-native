@@ -1,0 +1,11 @@
+services:
+  todo_dev_database:
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=todo_dev_db
+      - POSTGRES_PASSWORD=todo_dev_db
+      - POSTGRES_DB=todo_dev_db
+    volumes:
+      - .:/usr/postgres_database
